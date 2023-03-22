@@ -47,11 +47,17 @@ app.get('/', (req: Request, res: Response) => {
     
     const openDb = (): Pool => {
         const pool = new Pool({
-           user: 'postgres',
+           /*user: 'postgres',
             host: 'localhost',
             database:'todo' ,
             password: 'root',
-            port: 5432
+            port: 5432*/
+            user: 'root',
+            host: 'dpg-cgdjikceoogo8r34dcsg-a.oregon-postgres.render.com',
+            database:'todo_742a',
+            password:'mPu1zJUne5vGpQgB2Cu6WqmP4kZm6yO6',
+            port: 5432,
+            ssl: true
         })
         return pool
     }
